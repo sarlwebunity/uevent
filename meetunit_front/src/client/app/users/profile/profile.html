@@ -1,0 +1,57 @@
+<top-bar active="Membres"></top-bar>
+<section id="container_sortie">
+    <div id="liste_participant">
+        <h3>Participants</h3>
+        <div ng-repeat="participant in vm.sortie.participants">
+            {{participant.pseudo}}
+        </div>
+    </div>
+    <div id="image">
+        <img src="{{vm.sortie.photo}}"/>
+    </div>
+    <div id="fiche_event">
+        <div id="top">
+            <div id="titre">
+                {{vm.user.pseudo}}
+            </div>
+            <div id="participation">
+                <button class="btn btn-primary">Je participe</button>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="left">
+                <div id="date">
+                    <h3>Date</h3>
+                    12/03/2017
+                </div>
+                <div id="organisateur">
+                    <h3>Organisateur</h3>
+                    Nounouch81
+                </div>
+                <div id="prix">
+                    <h3>Prix</h3>
+                    <span ng-if="vm.sortie.prix != 0">
+                        {{vm.sortie.prix}} €
+                    </span>
+                    <span ng-if="vm.sortie.prix == 0">
+                        Gratuit
+                    </span>
+                </div>
+            </div>
+            <div id="right">
+                <div id="heure">
+                    <h3>Heure</h3>
+                    14h00
+                </div>
+                <div id="participants">
+                    <h3>Participants</h3>
+                    5/12
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="description">
+        <h3>Description</h3>
+        {{vm.sortie.description}}
+    </div>
+</section>

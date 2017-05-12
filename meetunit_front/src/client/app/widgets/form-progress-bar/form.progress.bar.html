@@ -1,0 +1,8 @@
+<div id="crumbs">
+    <ol>
+        <li ng-repeat="crumb in vm.crumbs" >
+            <a class="crumb hidden-xs" ng-class="{current: $index === vm.currentIndexCrumb, past: $index < vm.currentIndexCrumb}">{{$index + 1 + '. ' + crumb.title}}</a>
+            <a class="crumb visible-xs" ng-class="{current: $index === vm.currentIndexCrumb, past: $index < vm.currentIndexCrumb}">{{$index + 1 + ($index === vm.currentIndexCrumb ? '. ' + crumb.title : '')}}</a>
+        </li>
+    </ol>
+</div>

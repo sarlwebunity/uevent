@@ -1,0 +1,56 @@
+<top-bar active="Sorties"></top-bar>
+<section id="container_sortie_create">
+    <div id="liste_participant">
+        <h3>Participants</h3>
+        <div ng-repeat="participant in vm.sortie.participants">
+            {{participant.pseudo}}
+        </div>
+    </div>
+    <div id="image">
+        <img src="{{vm.sortie.photo}}"/>
+    </div>
+    <div id="fiche_event">
+        <div id="top">
+            <div id="titre">
+                <input type="text" id="input_titre" placeholder="Titre">
+            </div>
+            <div id="participation">
+                <button class="btn btn-vam"><i class="fa fa-share-alt" aria-hidden="true"></i></button><button class="btn btn-vam"><i class="fa fa-heart" aria-hidden="true"></i></button><button class="btn btn-vam">Je participe</button>
+            </div>
+        </div>
+        <div id="middle">
+            <div id="left">
+                <div id="date">
+                    <h3>Date</h3>
+                    <input type="date" id="input_date" placeholder="DD/MM/YYYY">
+                </div>
+                <div id="organisateur">
+                    <h3>Organisateur</h3>
+                    Winni
+                </div>
+                <div id="prix">
+                    <h3>Prix</h3>
+                    <input type="number" id="input_prix" placeholder="Gratuit">
+                </div>
+                <div id="adresse">
+                    <h3>Adresse</h3>
+                    {{vm.sortie.organisateur.pseudo}}
+                </div>
+            </div>
+            <div id="right">
+                <div id="heure">
+                    <h3>Heure</h3>
+                    <input type="time" id="input_heure" placeholder="HH:SS">
+                </div>
+                <div id="participants">
+                    <h3>Participants max</h3>
+                    <input type="number" id="input_participants" placeholder="Nb max">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="description">
+        <h3>Description</h3>
+        <textarea id="input_description" placeholder="Go go go..." cols="47" rows="14"></textarea>
+    </div>
+</section>

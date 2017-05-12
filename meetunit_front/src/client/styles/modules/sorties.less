@@ -1,0 +1,35 @@
+@import "variables";
+
+#container_sorties{
+    background-color: white;
+    margin: auto;
+    max-width: @size-width;
+    font-family: @police;
+
+    #sortie_header{
+        display: flex;
+        border-bottom: 1px solid silver;
+        padding: 10px;
+    }
+
+    .sortie{
+        display: flex;
+        border-bottom: 1px solid silver;
+        cursor: pointer;
+
+        .organisateur:hover{
+            color: red;
+        }
+    }
+
+
+
+    .colonne{
+        width: 25%;
+        padding: 10px;
+    }
+
+    .sortie:hover{
+        color: orange;
+    }
+}

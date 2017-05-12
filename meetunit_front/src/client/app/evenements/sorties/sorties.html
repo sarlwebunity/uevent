@@ -1,0 +1,44 @@
+<top-bar active="Sorties"></top-bar>
+<section id="container_sorties">
+    <article id="sortie_header">
+        <div class="date colonne">
+            Date
+        </div>
+        <div class="logo colonne">
+            Type
+        </div>
+        <div class="titre colonne">
+            Sortie
+        </div>
+        <div class="participant colonne">
+            Participants
+        </div>
+        <div class="organisateur colonne">
+            Organisateur
+        </div>
+        <div class="ville colonne">
+            Ville
+        </div>
+    </article>
+    <article ng-repeat="sortie in vm.sorties" class="sortie" ng-click="vm.goToSortie(sortie.id)">
+        <div class="date colonne">
+            {{sortie.date.format('HH:mm')}}
+        </div>
+        <div class="logo colonne">
+            {{sortie.activite.logo}}
+        </div>
+        <div class="titre colonne">
+            {{sortie.titre}}
+        </div>
+        <div class="participant colonne">
+            {{sortie.nbParticipants}}/{{sortie.nbParticipantsMax}}
+        </div>
+        <div ng-click="vm.goToUserProfile(sortie.organisateur.id)" class="organisateur colonne">
+            {{sortie.organisateur.pseudo}}
+        </div>
+        <div class="ville colonne">
+            {{sortie.lieu}}
+        </div>
+    </article>
+</section>
+
