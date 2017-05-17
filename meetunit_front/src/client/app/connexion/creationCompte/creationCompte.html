@@ -1,6 +1,8 @@
-<label>Nom</label><input type="text" name="name"/>
-<label>Prenom</label><input type="text" name="firstname"/>
-<label>Mail</label><input type="text" name="mail"/>
-<label>Mot de passe</label><input type="password" name="pass"/>
-<label>Confirmation du mot de passe</label><input type="password" name="passValid"/>
-<input type="button" name="valid" value="Valider" />
+<form>
+	<label>Nom</label><input ng-model="vm.user.name" type="text" name="name"/>
+	<label>Prenom</label><input type="text" ng-model="vm.user.firstname" name="firstname"/>
+	<label>Mail</label><input type="text" ng-model="vm.user.mail" name="mail"/>
+	<label>Mot de passe</label><input type="password" ng-model="vm.user.pass" name="pass"/>
+	<label>Confirmation du mot de passe</label><input type="password" ng-model="vm.user.passV" name="passValid"/>
+	<input type="button" name="valid" value="Valider" />
+</form>
