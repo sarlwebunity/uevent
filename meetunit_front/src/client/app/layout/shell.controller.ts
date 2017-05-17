@@ -2,9 +2,12 @@ namespace app.layout {
     'use strict';
     import IPromise = angular.IPromise;
 
-    export class ShellController implements ICallbackSpinner {
+    export class ShellController {
 
-        static $inject:Array<string> = ['userConnected', 'SpinnerService'];
+        /* @ngInject */
+        constructor() {
+        }
+        /*static $inject:Array<string> = ['userConnected', 'SpinnerService'];
 
         constructor(userConnected:blocks.auth.User, private SpinnerService:ISpinnerService) {
             this.user = userConnected;
@@ -20,7 +23,7 @@ namespace app.layout {
 
         public onPromiseUpdated = (promise:IPromise<any>) => {
             this.param.spinner = promise;
-        };
+        };*/
     }
 
     angular

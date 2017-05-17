@@ -26,8 +26,8 @@ namespace app.layout {
                     controllerAs: 'vm',
                     settings: {},
                     resolve: {
-                        userConnected: getUser,
-                        param: param
+                        /*userConnected: getUser,
+                        param: param*/
                     }
                 }
             }

@@ -8,7 +8,7 @@ namespace app.widgets.formprogressbar {
         };
         public controller:Function = FormProgressBarCtrl;
         public controllerAs:string = 'vm';
-        public templateUrl:string = 'app/widgets/form-progress-bar/form.progress.bar.html';
+        public templateUrl:string = 'app/widgets/form-progress-bar/top.bar.html';
     }
 
     angular

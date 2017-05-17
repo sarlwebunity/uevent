@@ -5,6 +5,7 @@ namespace app {
         'app.core',
         'app.widgets',
         'app.layout',
-
+        'app.evenements',
+        'app.users',
     ]);
 }
